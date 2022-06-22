@@ -74,6 +74,11 @@ ul {
   list-style: none;
 }
 
+.flex-club {
+  display: flex;
+  align-items: center;
+}
+
 .club {
   background-color: white;
   margin-bottom: 50px;
@@ -152,6 +157,7 @@ aside {
   color: white;
   padding: 5px 100px;
   font-size: 20px;
+  display: inline-block;
 }
 
 /* FOOTER */
