@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,8 +9,11 @@ body {
   font-family: sans-serif;
 }
 
-p {
-  margin-bottom: 20px;
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
 }
 
 .container {
@@ -17,15 +21,14 @@ p {
   margin: 0 auto;
 }
 
-.flex-container {
-  display: flex;
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* NAVIGATION */
 .navigation {
   width: 100%;
   background-color: white;
-  margin-bottom: 20px;
 }
 
 nav a {
@@ -55,23 +58,36 @@ h1,
 h2 {
   margin-bottom: 20px;
 }
-.main {
-  width: 70%;
-  margin-right: 50px;
-}
-.main-header {
-  position: relative;
+
+h3 {
   margin-bottom: 50px;
+}
+
+.main-content {
+  display: grid;
+  /* SETTING RELATED ARTICLES WIDHT TO 250px TO MATCH THE IMG WIDTH */
+  /* +20px RIGHT MARGIN */
+  grid-template-columns: 1fr 270px;
+  gap: 40px 70px;
+  margin: 25px 0;
+}
+
+.main-header,
+.more-info {
+  grid-column: 1 / -1;
+}
+
+.clubs {
+}
+
+.clubs-header {
+  position: relative;
 }
 
 .rates {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
-}
-
-ul {
-  list-style: none;
 }
 
 .flex-club {
@@ -81,10 +97,18 @@ ul {
 
 .club {
   background-color: white;
+  margin-left: 20px;
   margin-bottom: 50px;
   padding: 20px;
   position: relative;
-  /* display: inline-block; */
+}
+
+.club:last-child {
+  margin-bottom: 0;
+}
+
+.club-icon {
+  padding: 10px;
 }
 
 .club-desc {
@@ -115,14 +139,30 @@ ul {
   position: absolute;
   top: -30px;
   left: 0px;
-  font-size: 24px;
-  padding: 5px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 3px;
 }
 
-/* LATEST ARITCLES */
-aside {
-  width: 20%;
-  margin-bottom: 40px;
+.visit-button {
+  background-color: coral;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 100px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* LATEST ARTICLES */
+.latest-articles {
+  /* SHIFTING IT DOWN RELATIVE TO CLUBS LIST */
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .article-box {
@@ -135,7 +175,6 @@ aside {
 .article-box a:visited,
 .article-box a:hover,
 .article-box a:active {
-  color: black;
   text-decoration: none;
 }
 
@@ -143,21 +182,31 @@ aside {
   margin: 5px;
 }
 
+.articles-more {
+  display: block;
+  text-align: center;
+}
+
 /* MORE INFO */
 .more-info {
   background-color: white;
   padding: 15px 75px;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.visit-button {
-  background-color: coral;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 100px;
-  font-size: 20px;
-  display: inline-block;
+.more-info-header {
+  color: rgb(226, 117, 117);
+}
+
+.more-info p {
+  margin-bottom: 20px;
+}
+
+.visit-best-page {
+  display: block;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -178,17 +227,6 @@ footer a:active {
   padding: 25px;
 }
 
-/* GRID LAYOUT */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 700px auto 1fr;
-  column-gap: 50px;
-}
-
-.navigation,
-header,
-.main-header,
-footer {
-  grid-column: 1 / -1;
-  margin-bottom: 0;
+footer a:first-child {
+  padding-left: 0;
 }
