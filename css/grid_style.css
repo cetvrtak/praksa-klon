@@ -5,6 +5,11 @@
 }
 
 body {
+  display: grid;
+  /* SETTING RELATED ARTICLES WIDHT TO 250px TO MATCH THE IMG WIDTH */
+  /* +20px RIGHT MARGIN */
+  grid-template-columns: 5% 5fr 270px 5%;
+  gap: 40px 5%;
   background-color: rgba(255, 182, 193, 0.5);
   font-family: sans-serif;
 }
@@ -16,19 +21,18 @@ a:active {
   color: black;
 }
 
-.container {
-  width: 1111px;
-  margin: 0 auto;
-}
-
 .box-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* NAVIGATION */
-.navigation {
-  width: 100%;
+.nav-container {
   background-color: white;
+  grid-column: 1 / -1;
+}
+
+.navigation {
+  margin: 0 10%;
 }
 
 nav a {
@@ -63,21 +67,12 @@ h3 {
   margin-bottom: 50px;
 }
 
-.main-content {
-  display: grid;
-  /* SETTING RELATED ARTICLES WIDHT TO 250px TO MATCH THE IMG WIDTH */
-  /* +20px RIGHT MARGIN */
-  grid-template-columns: 1fr 270px;
-  gap: 40px 70px;
-  margin: 25px 0;
-}
-
-.main-header,
-.more-info {
-  grid-column: 1 / -1;
+.main-header {
+  grid-column: 2 / span 2;
 }
 
 .clubs {
+  grid-column: 2;
 }
 
 .clubs-header {
@@ -194,10 +189,12 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-column: 2 / span 2;
 }
 
 .more-info-header {
   color: rgb(226, 117, 117);
+  grid-column: 2;
 }
 
 .more-info p {
@@ -215,6 +212,11 @@ footer {
   background-color: coral;
   color: white;
   font-size: 12px;
+  grid-column: 1 / -1;
+}
+
+.footer {
+  margin: 0 10%;
 }
 
 footer a:link,
