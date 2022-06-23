@@ -35,6 +35,17 @@ a {
   align-items: center;
 }
 
+.hamburger {
+  display: none;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 3px;
+  background-color: rgba(255, 182, 193);
+  margin: 6px 0;
+}
+
 .nav-links a {
   /* display: inline-block; */
   /* padding: 10px 5px; */
@@ -242,4 +253,143 @@ footer a:active {
 
 footer a:first-child {
   padding-left: 0;
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+  /* RESETTING */
+  body {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .nav-container,
+  .main-header,
+  .clubs,
+  .more-info,
+  .more-info-header {
+    grid-column: 1;
+    padding: 0 10px;
+  }
+
+  .navigation,
+  .latest-articles {
+    margin: 0 auto;
+  }
+
+  /* SPECIAL STYLING */
+  .nav-links a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .more-info {
+    padding: 15px 30px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  /* RESETTING */
+  body {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .nav-container,
+  .main-header,
+  .clubs,
+  .more-info,
+  .more-info-header {
+    grid-column: 1;
+    padding: 0 10px;
+  }
+
+  .navigation,
+  .latest-articles {
+    margin: 0 auto;
+  }
+
+  .flex-club {
+    padding: 5px;
+  }
+
+  .club {
+    margin: 0 0 50px;
+  }
+
+  .club-desc {
+    width: 100%;
+    margin: 0;
+  }
+
+  .rating {
+    width: 100%;
+    padding: 0;
+  }
+
+  .club .visit-button {
+    text-align: center;
+  }
+
+  .special-offer {
+    font-size: 14px;
+  }
+
+  /* SPECIAL STYLING */
+  .nav-links a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .club {
+    padding: 0;
+  }
+
+  .flex-club {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .club-icon {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+
+  .num-rating {
+    display: none;
+  }
+
+  .star-rating {
+    font-size: 18px;
+  }
+
+  .visit-button {
+    justify-self: stretch;
+  }
+
+  .more-info-header {
+    border: none;
+    line-height: normal;
+  }
+
+  .more-info {
+    padding: 15px 30px;
+  }
+
+  footer {
+    display: none;
+  }
 }
