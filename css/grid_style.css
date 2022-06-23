@@ -10,7 +10,7 @@ body {
   /* +20px RIGHT MARGIN */
   grid-template-columns: 5% 5fr 270px 5%;
   gap: 40px 5%;
-  background-color: rgba(255, 182, 193, 0.5);
+  background-color: rgba(255, 182, 193);
   font-family: sans-serif;
 }
 
@@ -113,15 +113,15 @@ h3 {
 }
 
 .rating {
-  width: 25%;
-  font-weight: bold;
+  width: 40%;
   font-size: 36px;
-  padding: 10px 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
 }
 
 .num-rating {
-  width: 100%;
-  text-align: center;
+  /* width: 100%; */
 }
 
 .star-rating {
@@ -194,7 +194,14 @@ ul {
 
 .more-info-header {
   color: rgb(226, 117, 117);
-  grid-column: 2;
+  grid-column: 2 / span 2;
+  border-bottom: 2px solid rgb(226, 117, 117);
+  line-height: 0.1em;
+}
+
+.more-info-text {
+  background-color: rgba(255, 182, 193);
+  padding-right: 10px;
 }
 
 .more-info p {
