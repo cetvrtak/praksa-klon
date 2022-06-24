@@ -120,10 +120,18 @@ h3 {
   padding: 10px;
 }
 
+#ico-rating {
+  display: none;
+}
+
 .club-desc {
   margin: 10px;
   line-height: 1.4;
   width: 40%;
+}
+
+#club-desc-num-rating {
+  display: none;
 }
 
 .rating {
@@ -316,10 +324,6 @@ footer a:first-child {
     margin: 0 auto;
   }
 
-  .flex-club {
-    padding: 5px;
-  }
-
   .club {
     margin: 0 0 50px;
   }
@@ -327,6 +331,8 @@ footer a:first-child {
   .club-desc {
     width: 100%;
     margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238);
   }
 
   .rating {
@@ -336,6 +342,7 @@ footer a:first-child {
 
   .club .visit-button {
     text-align: center;
+    margin: 10px 10px 20px;
   }
 
   .special-offer {
@@ -357,19 +364,59 @@ footer a:first-child {
 
   .flex-club {
     display: grid;
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 3fr 5fr;
     justify-items: center;
     align-items: center;
+  }
+
+  .ico-container {
+    align-self: stretch;
+    justify-self: stretch;
+    background-color: rgb(238, 238, 238);
+    /* padding: 20% 10%; */
+    display: grid;
+    columns: 1fr;
+    align-content: end;
   }
 
   .club-icon {
     padding: 0;
     box-shadow: none;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .club-icon > img {
     border-radius: 5px;
   }
 
-  .num-rating {
+  /* SHUFFLE RATING POSITIONS */
+  .ico-rating-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    order: 1;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+  }
+
+  #ico-rating {
+    display: block;
+  }
+
+  .club .visit-button {
+    order: 1;
+  }
+
+  #club-rating {
     display: none;
+  }
+
+  #club-desc-num-rating {
+    display: block;
+    font-weight: bold;
+    font-size: 36px;
   }
 
   .star-rating {
