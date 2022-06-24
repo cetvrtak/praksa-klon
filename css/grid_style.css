@@ -256,7 +256,7 @@ footer a:first-child {
 }
 
 /* MEDIA */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* RESETTING */
   body {
     grid-template-columns: 1fr;
@@ -295,7 +295,7 @@ footer a:first-child {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   /* RESETTING */
   body {
     grid-template-columns: 1fr;
