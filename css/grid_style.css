@@ -9,7 +9,7 @@ body {
   /* SETTING RELATED ARTICLES WIDHT TO 250px TO MATCH THE IMG WIDTH */
   /* +20px RIGHT MARGIN */
   grid-template-columns: 5vw 5fr 270px 5vw;
-  gap: 40px 5vw;
+  column-gap: 5vw;
   background-color: rgba(255, 182, 193);
   font-family: sans-serif;
 }
@@ -25,6 +25,7 @@ a {
 /* NAVIGATION */
 .nav-container {
   background-color: white;
+  margin-bottom: 40px;
   grid-column: 1 / -1;
 }
 
@@ -82,10 +83,12 @@ h3 {
 }
 
 .main-header {
+  margin-bottom: 40px;
   grid-column: 2 / span 2;
 }
 
 .clubs {
+  margin-bottom: 40px;
   grid-column: 2;
 }
 
@@ -211,11 +214,13 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
   grid-column: 2 / span 2;
 }
 
 .more-info-header {
   color: rgb(226, 117, 117);
+  margin-bottom: 40px;
   grid-column: 2 / span 2;
   border-bottom: 2px solid rgb(226, 117, 117);
   line-height: 0.1em;
@@ -262,6 +267,30 @@ footer a:first-child {
   padding-left: 0;
 }
 
+.cookies {
+  background: white;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.cookies-desc {
+  padding: 10px 20px;
+}
+
+.agree-btn {
+  background-color: rgb(43, 43, 43);
+  color: white;
+  text-decoration: none;
+  width: 145px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  font-size: 24px;
+}
+
 /* MEDIA */
 /* TABLET */
 @media (max-width: 1023px) {
@@ -300,6 +329,14 @@ footer a:first-child {
 
   footer {
     display: none;
+  }
+
+  .cookies {
+    flex-direction: column;
+  }
+
+  .agree-btn {
+    margin-top: 0;
   }
 }
 
