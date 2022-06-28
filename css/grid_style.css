@@ -337,7 +337,10 @@ footer a:first-child {
   }
 
   .agree-btn {
+    width: 100px;
     margin-top: 0;
+    padding: 10px;
+    font-size: 20px;
   }
 }
 
