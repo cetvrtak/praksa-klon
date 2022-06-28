@@ -66,10 +66,24 @@ a {
   background-color: grey;
 }
 
+.flag {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
 #language-form {
   /* float: right; */
-  display: inline;
+  display: inline-block;
   margin: 0 10px;
+}
+
+.lang-select {
+  display: flex;
+}
+
+#lang {
+  border: none;
 }
 
 /* MAIN */
